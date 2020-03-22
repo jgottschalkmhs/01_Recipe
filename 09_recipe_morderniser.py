@@ -46,8 +46,9 @@ def not_blank(question, error_msg, num_ok):
     elif has_errors != '':
         print(error)
         not_blank(question, error_msg, num_ok)
-    else:
-        return response
+
+    # return line un-indented by GK as function was returning 'None'
+    return response
 
 
 def num_check(question):
@@ -270,7 +271,7 @@ for recipe_line in full_recipe:
 
 
 print()
-print("*****",(recipe_name),"*****")
+print("*****", recipe_name, "*****")
 print()
 print("source:",source)
 print("Mordernised recipe: ")
